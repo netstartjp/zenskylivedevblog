@@ -1,0 +1,5 @@
+# Ignore local utility scripts
+push_updates.bat
+
+# Ignore temporary files
+commit_message.txt
