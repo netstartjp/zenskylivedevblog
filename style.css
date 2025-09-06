@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
@@ -34,7 +33,7 @@ body {
     background-color: #1a202c;
     background-image: linear-gradient(135deg, #2c5282, #44337a, #2c5282);
     background-size: 200% 200%;
-    animation: gradient-animation 75s ease infinite; /* Very slow animation */
+    animation: gradient-animation 75s ease infinite;
     padding-top: 70px;
 }
 
@@ -121,7 +120,7 @@ body {
 }
 
 .grid-item > * {
-    background: rgba(45, 55, 72, 0.5); /* Darker glass */
+    background: rgba(45, 55, 72, 0.5);
     backdrop-filter: blur(12px) saturate(160%);
     -webkit-backdrop-filter: blur(12px) saturate(160%);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -136,15 +135,8 @@ body {
     box-shadow: var(--shadow);
 }
 
-.grid-item h2 {
-    color: var(--white-color);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
 .grid-item p {
-    color: #cbd5e0; /* Lighter text for body */
+    color: #cbd5e0;
 }
 
 aside ul {
@@ -180,35 +172,113 @@ footer a:hover {
     color: var(--white-color);
 }
 
-/* Terms page content styling */
-.grid-item .terms-section {
+.usage-policy {
+    font-size: 0.8em;
+    color: #a0aec0;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+}
+
+/* --- Heading & Content Styles --- */
+.grid-item .terms-section { /* For spacing in terms page */
     margin-bottom: 2.5rem;
 }
-.grid-item article h3 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+
+/* Card Titles (e.g., in Sidebar) */
+aside h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
     color: var(--white-color);
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 0.5rem;
-}
-.grid-item article h4 {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
     margin-bottom: 1rem;
-    color: #e2e8f0; /* slightly dimmer */
 }
-.grid-item article ul {
+
+/* Article Headings */
+article h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--white-color);
+}
+
+article h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--white-color);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.75rem;
+}
+
+article h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+}
+
+article ul {
     list-style-position: inside;
     padding-left: 1rem;
 }
-.grid-item article ul li {
+
+article ul li {
     margin-bottom: 0.5rem;
 }
 
-.usage-policy {
-    font-size: 0.8em;
-    color: #a0aec0; /* Slightly dimmer than main footer text */
-    max-width: 600px;
-    margin: 0.5rem auto 0;
+/* --- Responsive Design --- */
+@media (max-width: 840px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .header-container {
+        height: 60px;
+        padding: 0 1rem;
+    }
+
+    .page-container {
+        padding: 1rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #sidebar-container {
+        position: static;
+        top: auto;
+    }
+
+    .grid-item > * {
+        padding: 1.5rem;
+    }
+
+    article h2 {
+        font-size: 1.8rem;
+    }
+
+    article h3 {
+        font-size: 1.4rem;
+    }
+
+    article h4 {
+        font-size: 1.2rem;
+    }
 }
